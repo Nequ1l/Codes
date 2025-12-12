@@ -20,16 +20,16 @@
 
 ## Блок-схема
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Input N (10-30)]
-    B --> C{Is N valid?}
-    C -- Yes --> D[total = 0, i = 1]
-    C -- No --> Z[Error -> End]
-    D --> E[Input interval_i]
-    E --> F[total = total + interval_i]
-    F --> G{i < N?}
-    G -- Yes --> H[i = i + 1] --> E
-    G -- No --> I[Output total]
-    I --> J[End]
-    Z --> J
+**mermaid**
+```flowchart TD
+A[Start] --> B[Input N (10-30)]
+B --> C{Is N valid?}
+C -- Yes --> D[total = 0; i = 1]
+C -- No  --> Z[Error -> End]
+D --> E[Input interval_i]
+E --> F[total = total + interval_i]
+F --> G{i < N?}
+G -- Yes --> H[i = i + 1] --> E
+G -- No  --> I[Output total]
+I --> J[End]
+Z --> J
