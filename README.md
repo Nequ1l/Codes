@@ -22,13 +22,14 @@
 
 ```mermaid
 flowchart TD
-  A[Начало] --> B[Ввод N (10 ≤ N ≤ 30)]
-  B --> C{N в диапазоне?}
-  C -- Да --> D[total = 0, i = 1]
-  C -- Нет --> E[Ошибка → Конец]
-  D --> F[Ввод interval_i]
-  F --> G[total = total + interval_i]
-  G --> H{i < N?}
-  H -- Да --> I[i = i + 1] --> F
-  H -- Нет --> J[Вывод total]
-  J --> K[Конец]
+    A[Start] --> B[Input N (10-30)]
+    B --> C{Is N valid?}
+    C -- Yes --> D[total = 0, i = 1]
+    C -- No --> Z[Error -> End]
+    D --> E[Input interval_i]
+    E --> F[total = total + interval_i]
+    F --> G{i < N?}
+    G -- Yes --> H[i = i + 1] --> E
+    G -- No --> I[Output total]
+    I --> J[End]
+    Z --> J
